@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AQI Prediction</title>
+    <link rel = "stylesheet" href = "/static/css/res.css">
+</head>
+<body>
+    <h2 id = "result">{{prediction_text}}</h2>
+    <br>
+    <h3 id = "aqi-bucket" class="{% if aqi_bucket == 'Good' %}good{% elif aqi_bucket == 'Satisfactory' %}satisfactory{% elif aqi_bucket == 'Moderate' %}moderate{% elif aqi_bucket == 'Poor' %}poor{% elif aqi_bucket == 'Very Poor' %}very-poor{% elif aqi_bucket == 'Severe' %}severe{% endif %}">
+        AQI Level : {{ aqi_bucket }}
+    </h3>
+    <a href="{{url_for('home')}}"><button id="back"><b>BACK<b></button></a>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Air Quality Prediction</title>
+    <link rel = "stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class = "input form">
+        <form action="{{url_for('prediction')}}" method = "post" id = "input head">
+            <h1 id = "heading">Air Quality Prediction</h1>
+            <div class="input-row">
+                <div class="input-column">
+                    <label for = "city" style="color: #ff1493;"><b>City</b></label>
+                    <input list="cities" name="city" id="city" placeholder="Type or Select City" required>
+                    <datalist id="cities">
+                        <option value="Ahmedabad"><option value="Aizawl">
+                        <option value="Amaravati"><option value="Amritsar">
+                        <option value="Bengaluru"><option value="Bhopal">
+                        <option value="Brajrajnagar"><option value="Chandigarh">
+                        <option value="Chennai"><option value="Coimbatore">
+                        <option value="Delhi"><option value="Ernakulam">
+                        <option value="Gurugram"><option value="Guwahati">
+                        <option value="Hyderabad"><option value="Jaipur">
+                        <option value="Jorapokhar"><option value="Kochi">
+                        <option value="Kolkata"><option value="Lucknow">
+                        <option value="Mumbai"><option value="Patna">
+                        <option value="Shillong"><option value="Talcher">
+                        <option value="Thiruvananthapuram"><option value="Vishakhapatnam">
+                    </datalist>
+                    <br><br>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-column">
+                    <label for = "pm2p5" style="color: #ff1493;"><b>PM2.5</b></label>
+                    <input type = "number" name = "pm2p5" min="0" step="any" placeholder = "Enter PM2.5" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "pm10" style="color: #ff1493;"><b>PM10</b></label>
+                    <input type = "number" name = "pm10" min="0" step="any" placeholder = "Enter PM10" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "no" style="color: #ff1493;"><b>NO</b></label>
+                    <input type = "number" name = "no" min="0" step="any" placeholder = "Enter NO" required>
+                    <br><br>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-column">
+                    <label for = "no2" style="color: #ff1493;"><b>NO2</b></label>
+                    <input type = "number" name = "no2" min="0" step="any" placeholder = "Enter NO2" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "nox" style="color: #ff1493;"><b>NOx</b></label>
+                    <input type = "number" name = "nox" min="0" step="any" placeholder = "Enter NOx" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "nh3" style="color: #ff1493;"><b>NH3</b></label>
+                    <input type = "number" name = "nh3" min="0" step="any" placeholder = "Enter NH3" required>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-column">
+                    <label for = "co" style="color: #ff1493;"><b>CO</b></label>
+                    <input type = "number" name = "co" min="0" step="any" placeholder = "Enter CO" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "so2" style="color: #ff1493;"><b>SO2</b></label>
+                    <input type = "number" name = "so2" min="0" step="any" placeholder = "Enter SO2" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "o3" style="color: #ff1493;"><b>O3</b></label>
+                    <input type = "number" name = "o3" min="0" step="any" placeholder = "Enter O3" required>
+                    <br><br>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-column">
+                    <label for = "benzene" style="color: #ff1493;"><b>Benzene</b></label>
+                    <input type = "number" name = "benzene" min="0" step="any" placeholder = "Enter Benzene" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "toluene" style="color: #ff1493;"><b>Toluene</b></label>
+                    <input type = "number" name = "toluene" min="0" step="any" placeholder = "Enter Toluene" required>
+                    <br><br>
+                </div>
+                <div class="input-column">
+                    <label for = "xylene" style="color: #ff1493;"><b>Xylene</b></label>
+                    <input type = "number" name = "xylene" min="0" step="any" placeholder = "Enter Xylene" required>
+                    <br><br>
+                </div>
+            </div>  
+            <button id = "submit" type = "submit">Predict AQI</button>
+        </form>
+    </div>
+</body>
+</html>
